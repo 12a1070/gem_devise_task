@@ -140,7 +140,7 @@ ja:
       display: "カラム:%{name} 型:%{type}"
       options_for: "%{name}の出力オプション"
       empty_value_for_associated_objects: "<empty>"
-      click_to_reverse_selection: 'クリックで選択を反転します'
+      click_to_reverse_selection: "クリックで選択を反転します"
       csv:
         header_for_root_methods: "%{name}" # 'model' is available
         header_for_association_methods: "%{name} [%{association}]"
@@ -151,95 +151,3 @@ ja:
         default_col_sep: ","
         col_sep: "区切り文字"
         col_sep_help: "空白の場合は'%{value}'区切りです" # value is default_col_sep
-@morgoth
-morgoth commented on 7 Jun 2012
-Hi.
-
-Can you please update your translations reflecting changes made in railsadminteam/rails_admin@d72fffa
-
-home.name should be now admin.home.name
-views.pagination... should be now admin.pagination...
-
-@mshibuya
-Owner
-Author
-mshibuya commented on 7 Jun 2012
-Updated already✌️
-
-@Napoleonyjl
-Napoleonyjl commented on 24 Oct 2013
-Hi!
-How could I translate the content which appears after clicking 'Add filter' ? Like "Contains" and "Is exactly" and so on.
-Thanks very much for reading this.
-
-@kenta-s
-kenta-s commented on 3 Sep 2015
-bulk_delete: "以下の項目が削除され、それによって関連する項目が削除され、もしくは関係を失います:"
-
-should be like
-
-bulk_delete: "以下の項目と関連する項目が削除されます:"
-
-@soruma
-soruma commented on 11 Feb 2020
-The Rails Admin has been updated to include locales.
-Here is the difference between the added values.
-
---- a/config/locales/rails_admin.ja.yml
-+++ b/config/locales/rails_admin.ja.yml
-@@ -2,6 +2,26 @@
-
- ja:
-   admin:
-+    js:
-+      true: True
-+      false: False
-+      is_present: 存在する
-+      is_blank: 空白
-+      date: 日付 ...
-+      between_and_: ... から ...
-+      today: 今日
-+      yesterday: 昨日
-+      this_week: 今週
-+      last_week: 先週
-+      number: 数字 ...
-+      contains: 含む
-+      is_exactly: 確実に
-+      starts_with: で始まる
-+      ends_with: で終わる
-+      too_many_objects: "対象が多すぎます、上の検索ボックスを使用してください"
-+      no_objects: "対象が見つかりません"
-+    loading: "読み込み中..."
-+    toggle_navigation: ナビゲーション切り替え
-     home:
-       name: "ホーム"
-     pagination:
-@@ -9,7 +29,6 @@ ja:
-       next: "次 &raquo;"
-       truncate: "…"
-     misc:
--      filter_date_format: "yy/mm/dd" # a combination of 'dd', 'mm' and 'yy' with any delimiter. No other interpolation will be done!
-       search: "検索"
-       filter: "検索"
-       refresh: "更新"
-@@ -24,8 +43,12 @@ ja:
-       up: "上"
-       down: "下"
-       navigation: "ナビゲーション"
-+      root_navigation: "アクション"
-+      navigation_static_label: "リンク"
-       log_out: "ログアウト"
-+      time_ago: "%{time}前"
-       ago: "前"
-+      more: "さらに %{count} 個以上の %{models_name}"
-     flash:
-       successful: "%{name}の%{action}に成功しました"
-       error: "%{name}の%{action}に失敗しました"
-@@ -113,6 +136,7 @@ ja:
-     export:
-       confirmation: "%{name}としてエクスポート"
-       select: "エクスポートするフィールドを選択してください"
-+      select_all_fields: "全フィールドを選択"
-       fields_from: "%{name}のフィールド"
-       fields_from_associated: "関連する%{name}のフィールド"
-       display: "カラム:%{name} 型:%{type}"
